@@ -1,0 +1,1 @@
+s1=cd /home/w/www/display_qa_python_http_automated_diff && tools/with_venv.sh  api --config-file HttpAutoDiff/settings_beta.py --log-file HttpAutoDiff.log

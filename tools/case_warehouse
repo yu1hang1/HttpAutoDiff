@@ -1,0 +1,13 @@
+CREATE TABLE `case_warehouse` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `app_code` varchar(45) NOT NULL DEFAULT '' COMMENT '应用名字',
+  `service_name` varchar(100) NOT NULL DEFAULT '' COMMENT '对应接口类的名称',
+  `method_name` varchar(100) NOT NULL DEFAULT '' COMMENT '对应接口名称',
+  `type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '接口类型，0.dubbo，1.http',
+  `case_json` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '{}' COMMENT '用例',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `compress_type` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '表json字段是否压缩 0.未压缩 1.已压缩',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq_key_case` (`app_code`,`service_name`,`method_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='http接口自动化diff请求用例库';

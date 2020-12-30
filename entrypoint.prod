@@ -1,0 +1,2 @@
+api=cd /data/w/devops/app/shop-tools && tools/with_venv.sh api --config-file etc/production/common.conf --log-file shop-tools-api.log
+sync=cd /data/w/devops/app/shop-tools && tools/with_venv.sh sync --config-file etc/production/common.conf --log-file shop-tools-sync.log

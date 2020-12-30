@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>接口自动化diff平台</title>
+</head>
+<body>
+
+<form action="handler" method="post">
+
+    <table width="100%">
+        <tbody>
+        <tr>
+            <td colspan="5">
+                <div><h2>欢迎使用接口自动化diff平台</h2></div>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr nameref="cb0"></tr>
+        <tr nameref="cb0">
+            <td width="10">&nbsp;</td>
+            <td width="10"><b>request_method</b></td>
+            <td width="10">
+                <select name="request_method">
+                    <option value="GET">GET</option>
+                    <option value="POST">POST</option>
+                </select>
+            </td>
+        </tr>
+        <tr nameref="cb0">
+            <td colspan="3"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr nameref="cb0">
+            <td>&nbsp;</td>
+            <td width="10"><b>cookie</b></td>
+            <td>
+                <input name="cookie" type="text" size="180">
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr nameref="cb0">
+            <td colspan="3"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td width="10"><b>old_uri</b></td>
+            <td>
+                <input name="old_uri" type="text" size="180">
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td width="10"><b>old_param</b></td>
+            <td>
+                <input name="old_param" type="text" size="180">
+            </td>
+            <td></td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td width="10"><b>new_uri</b></td>
+            <td>
+                <input name="new_uri" type="text" size="180">
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td width="10"><b>new_param</b></td>
+            <td>
+                <input name="new_param" type="text" size="180">
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="3">
+                <button type="submit" tabindex="0"><b>点击开始diff</b></button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</form>
+
+</body>
+</html>
