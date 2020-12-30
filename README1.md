@@ -37,23 +37,20 @@ QA > HTTP接口自动化diff工具使用手册 > image2020-4-28 20:50:23.png
 
 ### 3.3报告展示
 #### 字段	释义	样例解释
-replace	
-表示key相同value不同，即字段存在差异
-
+* replace	
+- 表示key相同value不同，即字段存在差异
 "prev"为old_url的字段值，"value"为new_url的字段值，"detail"为差异详情
-
 样例：{ "replace": "/effectiveTime","value": "2020-02-24 09:00:53","prev": "2020-02-24 00:00:00"}
-
 解释：json对象中“effectiveTime”字段，在old_url响应中为"2020-02-24 00:00:00"，在new_url响应中为："2020-02-24 09:00:53"
 
-add	表示 exists in new_url的字段 && does not exist in old_url的字段	
+* add	
+表示 exists in new_url的字段 && does not exist in old_url的字段	
 样例：{ "add": "/shelfSnapIds/1","value": 47574184,"details": "array-item"}
-
 解释：json对象中“shelfSnapIds”字段为list，它第一个元素的值在new_url响应中存在，在old_url响应中不存在
 
-remove	 表示 exists in old_url的字段 && does not exist in new_url的字段	
+* remove	 
+表示 exists in old_url的字段 && does not exist in new_url的字段	
 样例：{ "remove": "/shelfSnapIds/1","prev": 47574180,"details": "array-item"}
-
 解释：json对象中“shelfSnapIds”字段为list，它第一个元素的值在old_url响应中存在，在new_url响应中不存在
 
 
@@ -76,8 +73,6 @@ remove	 表示 exists in old_url的字段 && does not exist in new_url的字段
 
 
 ## 6意见与反馈
-如果您在使用本工具过程中，遇到任何疑问，或不理解的报错，请蜂语联系hang.yu06，会第一时间支持您解决问题
-本工具是在店务智能陈列业务部系统重构时进行开发的，为RD和QA在接口自动化回归上节省很多人力，同时提升了回归case的覆盖率。但本工具存在许多不足，如果您发现任何地方实现的不够合理，或者有更好的建议，欢迎随时与我们联系！
 
 
 
